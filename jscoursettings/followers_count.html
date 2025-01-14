@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Followers Count</title>
+</head>
+<body>
+  <h1>Followers Count</h1>
+  
+  <!-- Affichage du compteur -->
+  <div id="countDisplay">0</div>
+  
+  <!-- Bouton pour ajouter des followers -->
+  <button onclick="increaseCount()">Add Follower</button>
+  
+  <script>
+    // Initialise le compteur
+    let count = 0;
+
+    // Fonction pour augmenter le compteur
+    function increaseCount() {
+      count++;        // Augmente le compteur de 1
+      displayCount(); // Met à jour l'affichage sur la page
+      checkCountValue(); // Vérifie si un jalon est atteint
+    }
+
+    // Fonction pour afficher la valeur actuelle du compteur
+    function displayCount() {
+      document.getElementById('countDisplay').innerHTML = count;
+    }
+
+    // Fonction pour vérifier les jalons
+    function checkCountValue() {
+      if (count === 10) {
+        alert("Your Instagram post gained 10 followers! Congratulations!");
+      } else if (count === 20) {
+        alert("Your Instagram post gained 20 followers! Keep it up!");
+      }
+    }
+  </script>
+</body>
+</html>
